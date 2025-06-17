@@ -46,7 +46,7 @@ SearchProductByID: (payload, callback) => {
                         // Chama método do microsserviço.
                         inventory.SearchProductByID({ id: req.params.id }, (err, product) => {
                             // Se ocorrer algum erro de comunicação
-                            // com o microsserviço, retorna para o navegador.
+                            // com o microsserviço, retorna para o navegador
                             if (err) {
                                 console.error(err);
                                 res.status(500).send({ error: 'something failed :(' });
